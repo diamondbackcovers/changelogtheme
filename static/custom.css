@@ -1,0 +1,7 @@
+html {font-size: 18px; line-height: 1.6}
+article > h1 {font-size: 18px;
+    font-weight: bold;
+    margin-top: 29px;
+    color: var(--text-alt);}
+main > nav > a:nth-child(2) {float:right}
+bdi {font-family: monospace; font-size: .8375em}	

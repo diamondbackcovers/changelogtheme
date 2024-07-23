@@ -1,0 +1,19 @@
+{{ define "main" }}
+	{{ range .Paginator.Pages	}}
+	<article class="h-entry">
+		<header>
+			{{ if .Title }}
+			<h1 class="p-name"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+			{{ end }}
+			<a href="{{ .Permalink }}" class="u-url">
+				<time class="dt-published">
+					{{ .Date.Format "2 January 2006" }}
+				</time>
+			</a>
+			<a href="{{ .Permalink }}">#</a>
+		</header>
+		{{ .Content }}
+	</article>
+	{{ end }}
+{{ partial "pagination.html" . }}
+{{ end }}
